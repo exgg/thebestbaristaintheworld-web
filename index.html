@@ -1,21 +1,19 @@
 <!doctype html>
 <html>
-  <head>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Trispace&display=swap" rel="stylesheet">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/audioplayer.css" />
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	
 
 
-    <style>
+<style>
 
-      body {background-color: black;}
+body {background-color: black;}
 
-      .p1 {
+     .p1 {
           font-family: 'Nunito Sans', sans-serif;
           font-family: 'Trispace', sans-serif;
           font-size: 20px;
@@ -23,175 +21,72 @@
           color: #e50914;
       }
 
-      .p2 {
-          font-family: 'Yellowtail', cursive;
-          font-size: 60px;
-      }
+	.wrapper {
+			display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+			min-height: 100vh;
+		  font-size: 10px;
+	}
+	.wrapper > :nth-last-child(2) {
+		flex: 1 0 auto;
+	}
+	.wrapper > :last-child {
+		margin-top: auto;
+	}
+	header {
+		height: 60px;
+		max-height: 80px;
+		background: black;
+	}
+	main {
+		background: black;
+	}
+	footer {
+		height: 100px;
+		background: black;
+	}
+	.wrapper > * {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 3em;
+	}
+	@keyframes remove {
+		to{height:0px;flex:0;overflow:hidden;line-height:0;}
+	}
+	
+	 </style>
 
-      body {
-        margin: 0;
-        padding: 0;
-      }
+</head>
 
-      main {
-        width: 100vw;
-        height: 100vh;
-        background-color: #121212;
-      }
-
-      .logo,
-      .content {
-        color: #fafafa;
-      }
-
-      .nav {
-        width: 100%;
-        background-color: #1a1a1a;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 3;
-      }
-
-      .logo,
-      #hamburger {
-        margin: 4%;
-      }
-
-      #hamburger {
-        opacity: 0.5;
-        cursor: pointer;
-        transition: opacity 0.25s linear;
-        width: clamp(1.5rem, 2vw + 1.1rem, 6rem);
-        height: clamp(2rem, 1.4vw + 1.7rem, 5rem);
-        display: flex;
-        align-items: center;
-      }
-
-      #hamburger:hover {
-        opacity: 1;
-      }
-
-      #hamburger div,
-      #hamburger div:after,
-      #hamburger div:before {
-        background-color: #fafafa;
-        border-radius: 10px;
-        width: clamp(1.5rem, 2vw + 1.1rem, 6rem);
-        height: clamp(0.2rem, 0.3vw + 0.1rem, 0.8rem);
-        transition: all 0.15s linear;
-      }
-
-      #hamburger div:before,
-      #hamburger div:after {
-        content: "";
-        position: absolute;
-      }
-
-      #hamburger div:before {
-        transform: translateY(-200%);
-      }
-
-      #hamburger div:after {
-        transform: translateY(200%);
-      }
-
-      #hamburger.open div {
-        background: transparent;
-      }
-
-      #hamburger.open div:before {
-        transform: rotate(45deg);
-      }
-
-      #hamburger.open div:after {
-        transform: rotate(-45deg);
-      }
-
-      #overlay {
-        position: fixed;
-        width: 100%;
-        min-height: 100%;
-        background-color: #1a1a1a;
-        z-index: 2;
-        transform: translateY(-100%);
-        transition: all 0.5s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #overlay.menu {
-        transform: translateY(0%);
-      }
-
-      #overlay a {
-        text-decoration: none;
-        color: #fafafa;
-        font-size: clamp(1rem, 4.1vw + 0.2rem, 10rem);
-        margin: 2%;
-        opacity: 0.5;
-        transition: opacity 0.2s linear;
-      }
-
-      #overlay a:hover {
-        opacity: 1;
-      }
-
-    </style>
+<body>
 
 
-    <title>The Best Barista In The World</title>
-  </head>
-  <body>
+	<div class="wrapper">
+		<header> <span class="p1">The Best Barista In The World</span></header>
 
-    <div id="overlay">
-      <a href="#">Link1</a>
-      <a href="#">Link2</a>
-      <a href="#">Link3</a>
-      <a href="#">Link4</a>
-    </div>
+	<main><img src="tbbitw.jpg" width="300px"></img></main>
 
-    <nav>
-    <span class="p1">The Best Barista In The World</span>
 
-    <div id="hamburger">
-      <div></div>
-    </div>
-
-    </nav>
-
-    <img src="tbbitw.jpg" width="300px"></img>
-   
-
-    
-  </body>
-
-  
-  <script>
-
-    (() => {
-      const hamburger = document.getElementById("hamburger");
-      const menu = document.getElementById("overlay");
-      let open = false;
-
-      const change = () => {
-        if (!open) {
-          hamburger.classList.add("open");
-          menu.classList.add("menu");
-        } else {
-          hamburger.classList.remove("open");
-          menu.classList.remove("menu");
-        }
-        open = !open;
-      };
-
-      hamburger.addEventListener("click", change);
-    })();
-
-</script>
-
+		<footer>
+		
+				<audio preload="auto" controls>
+							<source src="coffee.wav">
+				</audio>
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				<script src="js/audioplayer.js"></script>
+				<script>
+					$(function() {
+						$('audio').audioPlayer();
+					});
+				</script>
+	
+	  </footer>
+	</div>
+</body>
 </html>
