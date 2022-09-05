@@ -7,12 +7,25 @@
 	<link rel="stylesheet" href="css/audioplayer.css" />
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+	
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto+Flex:opsz,wght@8..144,100&display=swap" rel="stylesheet">
 
 <style>
 
 body {background-color: black;}
 
+	 .h1 {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+	 }
+
+	 .p2 {
+		font-family: 'Roboto Flex', sans-serif;
+		color: white;
+	 }
      .p1 {
           font-family: 'Nunito Sans', sans-serif;
           font-family: 'Trispace', sans-serif;
@@ -62,6 +75,54 @@ body {background-color: black;}
 	
 	 </style>
 
+
+	 <style>
+
+		.table-div {
+			display: table;
+			width: 100%;
+		}
+
+		section {
+			padding: 10px;
+			border: 10px;
+			height: 427px;
+			width: 50%;
+			display: table-cell;
+		}
+
+		aside {
+			padding: 10px;
+			border: 10px;
+			height: 427px;
+			width: 50%;
+			display: table-cell;
+		}
+
+		@media (max-width: 600px){
+			section {
+				display: block;
+				height: 447px;
+				padding: 10px;
+				border: 10px;
+				width: 100%;
+			}
+			
+			aside {
+				display: block;
+				height: 447px;
+				padding: 10px;
+				border: 10px;
+				width: 100%;
+			}
+
+			.responsive-image {
+				width: 50%;
+				height: auto;
+			}
+		}
+
+	 </style>
 </head>
 
 <body>
@@ -70,7 +131,18 @@ body {background-color: black;}
 	<div class="wrapper">
 		<header> <span class="p1">The Best Barista In The World</span></header>
 
-	<main><img src="tbbitw.jpg" height="200px" ></img></main>
+	<main>
+	
+	
+		<div class="table-div">
+			<section><img src="tbbitw.jpg" height="400px" class="responsive-image"></img></section>
+			<aside>
+				<h1 class="h1">The best barista in the world</h1>
+				<p class="p2">The best barista in the world</p>
+			</aside>
+		</div>
+
+	</main>
 		
 
 
