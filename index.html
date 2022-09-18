@@ -25,6 +25,20 @@ body {background-color: black;}
         padding: 0px;
 	 }
 
+	 .h2 {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		margin: 0px;
+        padding: 0px;
+	 }
+
+	 .h3 {
+		font-family: 'Oswald', sans-serif;
+		color: white;
+		margin: 0px;
+        padding: 0px;
+	 }
+
 	 
 
 	 .p2 {
@@ -214,7 +228,14 @@ body {background-color: black;}
 	}
 		</style>
 		<!-- end of menu style -->
-		
+
+		<style>
+			.Synopsis-container {
+				display: none;
+			}
+
+		</style>
+
 </head>
 
 <body>
@@ -231,17 +252,24 @@ body {background-color: black;}
 	</div>
 
 	<div class="wrapper">
-		<header><button class="button contentbutton">Listen to Latest &#x23E9;&#xFE0E;</button> <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="h1">&#9776;</span></header>
+		<header><button class="button contentbutton">Listen to Latest &#x23E9;&#xFE0E;</button> <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="h1 closebtn">&#9776;</span></header>
 	<main>
 		<div class="table-div">
 			<section><img src="tbbitw-square.jpg" height="400px" class="responsive-image centerImage"></img></section>
 			<aside>
 				<div class="aside-container">
+				<h1 class="h3">Preview</h1>
+				<p class="p2">Gunter enjoys a cortado.
+				</p>
+			  </div>
+
+			  <div class="Synopsis-container">
 				<h1 class="h1">The best barista in the world</h1>
 				<p class="p2">Situated at the lower end of London's coolest street, Chiltern Street is a small pretty newsagent. Popular with regulars and destination travellers alike,
 					this pristine venue with its red tables and carefully curated rows of magazines is forever buzzing with electric personalities. But things are not what they seem.  Inside the newsagents works a barista, he sometimes dances and at other times ridicules and plays games with customers.  His coffee is exceptional, his tea pitch perfect and his hot chocolate to die for.  The barista is loved by many and loathed by some, however, all are in agreement.  He is without a doubt The ‘Best Barista In The World’.
 				</p>
 			  </div>
+
 			</aside>
 
 		</div>
@@ -267,8 +295,7 @@ body {background-color: black;}
 	</div>
 
 	<script>
-		function openNav() {
-			
+		function openNav() {	
 		  document.getElementById("myNav").style.height = "100%";
 		}
 		
