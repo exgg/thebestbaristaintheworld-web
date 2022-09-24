@@ -353,16 +353,16 @@ body {background-color: var(--background)}
     <div id="myNav" class="overlay">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<div class="overlay-content">
-		  <a href="#" class="h1"><a href="index.html">Home</a>
+		  <a href="index.html" class="h1">Home</a>
 		  <hr class="menuhr">
 		  <h2 class="h2">Episodes</h2>
 		  <a href="#" class="h1">Preview</a>
 		  <a href="#" class="h2">Flat White</a>
 		  <a href="#" class="h2">Ali Chino</a>
 		  <a href="#" class="h2">Influencer Coffee</a>
-		  <a href="#" class="h2">Matcha</a>
+		  <a href="javascript:void(0)" class="h2">Matcha</a>
 		  <hr class="menuhr">
-		  <a href="javascript:void(0)" class="h1" onclick="loader()">Synopsis & About</a>
+		  <a href="synopsis.html" class="h1">Synopsis & About</a>
 		  <a href="#" class="h1">Contact</a>
 		</div>
 	</div>
@@ -442,10 +442,8 @@ body {background-color: var(--background)}
 		}
 
 		function loader() {
-			alert(''+ document.getElementById("synopsis"));
-		  document.getElementById("myNav").style.height = "0%";
-		 
 		  document.getElementById("synopsis").style.visibility = "block";
+		  document.getElementById("myNav").style.height = "0%";
 		}
     </script>
 
