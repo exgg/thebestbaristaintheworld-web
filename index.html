@@ -75,6 +75,7 @@ body {background-color: var(--background)}
         padding: 0px;
 		
 	 }
+
      .p1 {
           font-family: 'Nunito Sans', sans-serif;
           font-family: 'Trispace', sans-serif;
@@ -84,6 +85,36 @@ body {background-color: var(--background)}
 		  margin: 0px;
           padding: 0px;
       }
+
+	  .p-all {
+		font-family: 'Roboto Flex', sans-serif;
+		color: white;
+		font-size: 0.39em;
+		margin: 0px;
+        padding: 0px;
+		font-weight: bold;
+		
+	 }
+
+	 .p-all-bold {
+		font-family: 'Roboto Flex', sans-serif;
+		color: white;
+		font-size: 0.57em;
+		margin: 0px;
+        padding: 0px;
+		font-weight: bold;
+		margin-top: 2px;
+	 }
+
+	 .p-all-bold-header {
+		font-family: 'Roboto Flex', sans-serif;
+		color: white;
+		font-size: 0.49em;
+		margin: 0px;
+        padding: 0px;
+		font-weight: bold;
+		margin-top: 2px;
+	 }
 
 	  .aside-container {
 		vertical-align: top;
@@ -282,6 +313,34 @@ body {background-color: var(--background)}
 
 		</style>
 
+		<style>
+			.card {
+				background-color: rgb(19, 19, 19);
+				color: white;
+				padding: 1rem;
+				height: 800;
+
+			}
+
+			.cards {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: grid;
+				grid-gap: 1rem;
+			}
+
+			/* Screen larger than 600px? 2 column */
+			@media (min-width: 600px) {
+				.cards { grid-template-columns: repeat(2, 1fr); }
+			}
+
+			/* Screen larger than 900px? 3 columns */
+			@media (min-width: 900px) {
+				.cards { grid-template-columns: repeat(3, 1fr); }
+			}
+
+		</style>
+
 </head>
 
 <body>
@@ -289,16 +348,16 @@ body {background-color: var(--background)}
     <div id="myNav" class="overlay">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<div class="overlay-content">
-		  <a href="javascript:loader('synopsis');" class="h1">Synopsis</a>
-		  <a href="#" class="h1">Preview</a>
+		  <a href="#" class="h1"><a href="index.html">Home</a>
 		  <hr class="menuhr">
 		  <h2 class="h2">Episodes</h2>
+		  <a href="#" class="h1">Preview</a>
 		  <a href="#" class="h2">Flat White</a>
 		  <a href="#" class="h2">Ali Chino</a>
 		  <a href="#" class="h2">Influencer Coffee</a>
 		  <a href="#" class="h2">Matcha</a>
 		  <hr class="menuhr">
-		  <a href="#" class="h1">About</a>
+		  <a href="#" class="h1">Synopsis & About</a>
 		  <a href="#" class="h1">Contact</a>
 		</div>
 	</div>
@@ -306,57 +365,51 @@ body {background-color: var(--background)}
 
 	<div class="wrapper">
 		<header> <button class="button playLatestButton">Play Latest</button> <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="h1 openbtn">&#9776;</span></header>
-	<main>
-		<!-- 
-		<div class="table-div">
-			<section><img src="tbbitw-square.jpg" height="400px" class="responsive-image centerImage"></img></section>
-			<aside>
-				<div class="aside-container">
-				<h4>The Best Barista In The World</h4>
-				<h1 class="h1">Preview</h1>
-				<p class="p2">Gunter enjoys a cortado.
-				</p>
-			  </div>
+	
 
-			  <div class="synopsis" id="synopsis">
-				<h1 class="h1">The best barista in the world</h1>
-				<p class="p2">Situated at the lower end of London's coolest street, Chiltern Street is a small pretty newsagent. Popular with regulars and destination travellers alike,
-					this pristine venue with its red tables and carefully curated rows of magazines is forever buzzing with electric personalities. But things are not what they seem.  Inside the newsagents works a barista, he sometimes dances and at other times ridicules and plays games with customers.  His coffee is exceptional, his tea pitch perfect and his hot chocolate to die for.  The barista is loved by many and loathed by some, however, all are in agreement.  He is without a doubt The ‘Best Barista In The World’.
-				</p>
-			  </div>
-			</aside>
-		</div>
+		<div class="cards">
 
-		-->
-<!-- 
-		<div class="table-div">
-			<section><img src="tbbitw-square.jpg" height="400px" class="responsive-image centerImage"></img></section>
-			<aside>
-				<div class="aside-container">
-				<h4>The Best Barista In The World</h4>
-				<h1 class="h1">Flat white</h1>
-				<p class="p2">Ella orders a flat white Gunter a cortado, both annoy the best barista in the world.
-					<br><button class="button">Play Episode</button>
-				</p>
-			  </div>
-			</aside>
-		</div>
-	-->
-		
-		<div class="table-div">
-			<section><img src="tbbitw-square.jpg" height="400px" class="responsive-image centerImage"></img></section>
-			<aside>
-				<div class="aside-container">
-				<h4>The Best Barista In The World</h4>
-				<h1 class="h1">S1:E2 'Ali Chino'</h1>
-				<p class="p2"> Ali a regular and The Best Barista In The World  admire a porsche parked outside the newsagents. Ella attempts to order an 'Ali Chino'.
-					<br><button class="button">Play Episode</button>
-				</p>
-			  </div>
-			</aside>
-		</div>
+			<div class="card"><img src="tbbitw-square.jpg" height="300px" class="responsive-image centerImage"></img>
+				<p class="p-all-bold-header">The Best Barista In The World</p>
+				<p class="p-all-bold">Preview</p>
+				<p class="p-all">Gunter stands outside the newsagents, enjoys his cappuccino and describes the scene of the Best Barista In The world at work.</p>
+				<button class="button">Play Episode</button>
+				<button class="button">View Script</button>
+			</div>
 
-	</main>
+			<div class="card"><img src="tbbitw-square.jpg" height="300px" class="responsive-image centerImage"></img>
+				<p class="p-all-bold-header">The Best Barista In The World</p>
+				<p class="p-all-bold">S1:E2 'Flat White'</p>
+				<p class="p-all">Ella orders a flat white Gunter a cortado. Both annoy the best barista in the world, who in turn torments the pair.</p>
+				<button class="button">Play Episode</button>
+				<button class="button">View Script</button>
+			</div>
+
+			<div class="card"><img src="influencer-coffee.jpg" height="300px" class="responsive-image centerImage"></img>
+				<p class="p-all-bold-header">The Best Barista In The World</p>
+				<p class="p-all-bold">S1:E2 'Influencer Coffee'</p>
+				<p class="p-all">Lisa makes a tik tok of her coffee then goes on to discuss the contents of her handbag with the best barista in the world.</p>
+				<button class="button">Play Episode</button>
+				<button class="button">View Script</button>
+			</div>
+
+			<div class="card"><img src="ali-chino-square.jpg" height="300px" class="responsive-image centerImage"></img>
+				<p class="p-all-bold-header">The Best Barista In The World</p>
+				<p class="p-all-bold">S1:E2 'Ali Chino'</p>
+				<p class="p-all">Ali a regular and The Best Barista In The World admire a porsche parked outside the newsagents. Ella attempts to order an 'Ali Chino'</p>
+				<button class="button">Play Episode</button>
+				<button class="button">View Script</button>
+			</div>
+
+			<div class="card"><img src="matcha-square.jpg" height="300px" class="responsive-image centerImage"></img>
+				<p class="p-all-bold-header">The Best Barista In The World</p>
+				<p class="p-all-bold">S1:E2 'Matcha Is A Thing'</p>
+				<p class="p-all">Some of the regulars get discusted when a guy orders a almond milk matcha</p>
+				<button class="button">Play Episode</button>
+				<button class="button">View Script</button>
+			</div>
+		  </div>
+
 		
 		<footer>
 		
@@ -384,11 +437,8 @@ body {background-color: var(--background)}
 		}
 
 		function loader() {
-			
 		  document.getElementById("synopsis").style.visibility = "block";
 		  document.getElementById("myNav").style.height = "0%";
-		 
-
 		}
     </script>
 
