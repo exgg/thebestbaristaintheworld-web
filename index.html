@@ -353,7 +353,7 @@ body {background-color: var(--background)}
     <div id="myNav" class="overlay">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<div class="overlay-content">
-		  <a href="#" class="h1"><a href="index.html">Home</a>
+		  <a href="index.html" class="h1">Home</a>
 		  <hr class="menuhr">
 		  <h2 class="h2">Episodes</h2>
 		  <a href="#" class="h1">Preview</a>
@@ -362,16 +362,20 @@ body {background-color: var(--background)}
 		  <a href="#" class="h2">Influencer Coffee</a>
 		  <a href="#" class="h2">Matcha</a>
 		  <hr class="menuhr">
-		  <a href="javascript:void(0)" class="h1" onclick="loader()">Synopsis & About</a>
+		  <a href="synopsis.html">Synopsis & About</a>
 		  <a href="#" class="h1">Contact</a>
 		</div>
 	</div>
 
-
 	<div class="wrapper">
 		<header> <button class="button playLatestButton">Play Latest</button> <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="h1 openbtn">&#9776;</span></header>
 	
-
+		<div id="synopsis" class="synopsis">
+			<p class="p2">Situated at the lower end of London's coolest street, Chiltern Street is a small pretty newsagent. Popular with regulars and destination travellers alike,
+			  this pristine venue with its red tables and carefully curated rows of magazines is forever buzzing with electric personalities. But things are not what they seem.  Inside the newsagents works a barista, he sometimes dances and at other times ridicules and plays games with customers.  His coffee is exceptional, his tea pitch perfect and his hot chocolate to die for.  The barista is loved by many and loathed by some, however, all are in agreement.  He is without a doubt The ‘Best Barista In The World’.
+		  </p>
+		</div>
+		  
 		<div class="cards">
 
 			<div class="card"><img src="tbbitw-square.jpg" height="300px" class="responsive-image centerImage"></img>
@@ -415,7 +419,8 @@ body {background-color: var(--background)}
 			</div>
 		  </div>
 
-		
+		  
+
 		<footer>
 		
 				<audio preload="auto" controls>
@@ -442,7 +447,7 @@ body {background-color: var(--background)}
 		}
 
 		function loader() {
-			alert(''+ document.getElementById("synopsis"));
+			alert(''+ document.getElementById("synopsis").style.visibility);
 		  document.getElementById("myNav").style.height = "0%";
 		 
 		  document.getElementById("synopsis").style.visibility = "block";
